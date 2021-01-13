@@ -173,4 +173,14 @@
       color: $color-3;
     }
   }
+
+  @media only screen and (max-width: 1000px) {
+    .timeline-event-copy {
+      padding: 2.1rem;
+      position: relative;
+      top: -1.875em;
+      left: 2rem;
+      width: 90%;
+    }
+  }
 }

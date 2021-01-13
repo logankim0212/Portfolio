@@ -49,7 +49,7 @@ export default class About extends Component {
                     rotation: 7
                 })
                 .to([picture], 2, {
-                    rotation: -2,
+                    rotation: 0,
                     ease: "elastic.out(0.9, 0.3)"
                 });
         }, 800)
