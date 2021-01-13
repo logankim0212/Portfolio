@@ -47,7 +47,7 @@ class App extends Component {
         };
 
         return (
-            <Router>
+            <Router basename="/Portfolio">
                 <Navbar/>
                 <Route render={({location}) => (
                     <TransitionGroup>
@@ -60,11 +60,11 @@ class App extends Component {
                             onEntering={onEnter}
                             unmountOnExit>
                             <Switch location={location}>
-                                <Route exact path={'/Portfolio/'} component={Home}/>
-                                <Route exact path={'/Portfolio/about'} component={About}/>
-                                <Route exact path={'/Portfolio/projects'} component={Projects}/>
-                                <Route exact path={'/Portfolio/timeline'} component={Timeline}/>
-                                <Route exact path={'/Portfolio/contact'} component={Contact}/>
+                                <Route exact path={'/'} component={Home}/>
+                                <Route exact path={'/about'} component={About}/>
+                                <Route exact path={'/projects'} component={Projects}/>
+                                <Route exact path={'/timeline'} component={Timeline}/>
+                                <Route exact path={'/contact'} component={Contact}/>
                                 <Route exact path='*' component={NotFound} />
                             </Switch>
                         </CSSTransition>

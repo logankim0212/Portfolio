@@ -154,7 +154,7 @@ class Navbar extends Component {
                 </div>
                 <div className={'nav-container'}>
                     <div className={'logo color'}>
-                        <NavLink className={'logo-link color'} exact activeClassName='active' to={'/Portfolio/'}
+                        <NavLink className={'logo-link color'} exact activeClassName='active' to={'/'}
                                  onClick={this.headerClicked}>
                             Logan J. Kim
                         </NavLink>
@@ -172,7 +172,7 @@ class Navbar extends Component {
                                     return (
                                         <li key={index} className="menu-li">
                                             <NavLink className={item.cName} activeClassName='active active-menu'
-                                                     to={'/Portfolio' + item.url} onClick={this.linkClicked}>
+                                                     to={item.url} onClick={this.linkClicked}>
                                                 {item.title}
                                             </NavLink>
                                         </li>

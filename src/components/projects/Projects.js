@@ -37,29 +37,32 @@ export default class Projects extends Component {
             <div className={'page'}>
                 <section id="colorlib-hero" className="js-fullheight project" data-section="projects">
                     <div className="view main content">
-                        <div className={'line-wrap'}>
-                            <h1 className={'header color'}>Remember that wherever your heart is, there you will
-                                find your treasure</h1>
-                        </div>
-                        <div className={'line-wrap'}>
-                            <div className={'caption'}>
-                                <em>- The Alchemist -</em>
+                        <div className={'first-screen'}>
+                            <img className="star"
+                                 src="./images/flare.png" alt={'Star'}/>
+
+                            <div className={'line-wrap'}>
+                                <h1 className={'header color'}>Remember that wherever your heart is, there you will
+                                    find your treasure</h1>
                             </div>
-                        </div>
-                        <hr className={'divider center'}/>
-                        <div className="content">
-                            <div className="content--inner">
-                                <p className="project-submenu">Links to the each project will be here</p>
-                                {
-                                    ProjectItems.map((item, index) => {
-                                        return (
-                                            <div className={'row-full'}>
-                                                {item.title}
-                                            </div>
-                                        )
-                                    })
-                                }
+                            <div className={'line-wrap'}>
+                                <div className={'caption'}>
+                                    <em>- The Alchemist -</em>
+                                </div>
                             </div>
+                            <hr className={'divider center'}/>
+                            <p className="project-submenu">Links to the each project will be here</p>
+                        </div>
+                        <div className="content--inner">
+                            {
+                                ProjectItems.map((item, index) => {
+                                    return (
+                                        <div className={'row-full'}>
+                                            {item.title}
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </section>
