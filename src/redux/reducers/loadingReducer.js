@@ -1,21 +1,31 @@
-import { FETCH_POSTS, NEW_POST } from '../actions/types';
+import {ENABLE_LOADING, DISABLE_LOADING, FETCH_LOADING} from '../actionTypes';
 
 const initialState = {
-    items: [],
-    item: {}
+    loading: false
 };
 
-export default function(state = initialState, action) {
+export default function loadingReducer(state = initialState, action) {
     switch (action.type) {
-        case FETCH_POSTS:
+        case FETCH_LOADING:
+            console.log('FETCH_LOADING');
+
             return {
                 ...state,
-                items: action.payload
+                loading: state.loading
             };
-        case NEW_POST:
+        case ENABLE_LOADING:
+            console.log('ENABLE_LOADING');
+
             return {
                 ...state,
-                item: action.payload
+                loading: true
+            };
+        case DISABLE_LOADING:
+            console.log('DISABLE_LOADING');
+
+            return {
+                ...state,
+                loading: false
             };
         default:
             return state;

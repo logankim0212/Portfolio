@@ -1,35 +1,166 @@
 import React, {Component} from 'react'
 import './Navbar.scss';
 import {MenuItems} from "./MenuItems";
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import {RingLoader} from 'react-spinners';
+import {connect} from 'react-redux'
+import {fetchLoading, enableLoading, disableLoading} from '../../redux/actions'
+import PropTypes from 'prop-types';
 
-export default class Navbar extends Component {
-    state = { clicked: false }
+class Navbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.toggleMenuIcon = this.toggleMenuIcon.bind(this);
+        this.headerClicked = this.headerClicked.bind(this);
+        this.linkClicked = this.linkClicked.bind(this);
+
+        this.state = {
+            active: false,
+            updating: false
+        };
+    }
+
+    componentDidMount() {
+        this.props.fetchLoading();
+    }
+
+    componentDidUpdate = () => {
+        let loaderStyle = document.querySelector(".loader").style;
+        let logoStyle = document.querySelector(".logo-link").style;
+        let navLink = document.querySelectorAll(".nav-links");
+        let active = document.querySelector(".active");
+        let opened = document.querySelector(".opened");
+
+        if (!this.state.updating && this.props.storage.loading) {
+            this.setState({
+                updating: true
+            });
+
+            loaderStyle.display = "block";
+            logoStyle.pointerEvents = "none";
+
+            for (let i = 0; i < navLink.length; i++) {
+                navLink[i].style.pointerEvents = "none";
+            }
+
+            setTimeout(() => {
+                loaderStyle.opacity = 1;
+                document.body.style.overflowY = "hidden";
+                loaderStyle.zIndex = "1";
+            }, 1)
+
+            setTimeout(() => {
+                loaderStyle.opacity = 0;
+            }, 1000)
+
+            setTimeout(() => {
+                document.body.style.overflowY = "auto";
+                loaderStyle.zIndex = "-1";
+                loaderStyle.display = "none";
+                logoStyle.pointerEvents = "auto";
+
+                for (let i = 0; i < navLink.length; i++) {
+                    navLink[i].style.pointerEvents = "auto";
+                }
+
+                if (active !== null) {
+                    active.style.pointerEvents = "none";
+                }
+
+                if (opened !== null) {
+                    opened.style.pointerEvents = "none";
+                }
+
+                this.props.disableLoading();
+
+                this.setState({
+                    updating: false
+                });
+            }, 3000)
+        }
+    }
+
+    toggleMenuIcon() {
+        const currState = this.state.active;
+
+        this.setState({
+            active: !currState
+        });
+    };
+
+    linkClicked() {
+        this.props.enableLoading();
+
+        window.scrollTo(0, 0);
+        this.toggleMenuIcon();
+    }
+
+    headerClicked() {
+        this.props.enableLoading();
+
+        this.setState({
+            active: false
+        });
+    }
 
     render() {
         return (
-            <div className={'navbar main'}>
-                <div className={'logo color'}>
-                    <NavLink className={'logo-link color'} exact activeClassName='active' to={'/'}>
-                        Logan J. Kim
-                    </NavLink>
+            <div className={'navbar'}>
+                <div className={'loader'}>
+                    <div className={'loaderIcon'}>
+                        <RingLoader
+                            color={'#c5b358'}
+                            loading={this.props.loading}/>
+                    </div>
                 </div>
-                <div className={'menu'}>
-                    <ul>
-                        {
-                            MenuItems.map((item, index) => {
-                                return (
-                                    <li key={index}>
-                                        <NavLink className={item.cName} activeClassName='active' to={item.url}>
-                                            {item.title}
-                                        </NavLink>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
+                <div className={'copyright'}>
+
+                </div>
+                <div className={'nav-container'}>
+                    <div className={'logo color'}>
+                        <NavLink className={'logo-link color'} exact activeClassName='active' to={'/'}
+                                 onClick={this.headerClicked}>
+                            Logan J. Kim
+                        </NavLink>
+                    </div>
+                    <div className={this.state.active ? 'menu-icon opened' : 'menu-icon'}
+                         onClick={this.toggleMenuIcon}>
+                        <div className="bar bar-1"/>
+                        <div className="bar bar-2"/>
+                        <div className="bar bar-3"/>
+                    </div>
+                    <div className={this.state.active ? 'menu opened' : 'menu'}>
+                        <ul className="menu-ul">
+                            {
+                                MenuItems.map((item, index) => {
+                                    return (
+                                        <li key={index} className="menu-li">
+                                            <NavLink className={item.cName} activeClassName='active active-menu'
+                                                     to={item.url} onClick={this.linkClicked}>
+                                                {item.title}
+                                            </NavLink>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+Navbar.propTypes = {
+    fetchLoading: PropTypes.func.isRequired,
+    enableLoading: PropTypes.func.isRequired,
+    disableLoading: PropTypes.func.isRequired,
+    storage: PropTypes.object
+};
+
+const mapStateToProps = state => ({
+    storage: state.storage
+});
+
+export default connect(mapStateToProps, {fetchLoading, enableLoading, disableLoading})(Navbar)

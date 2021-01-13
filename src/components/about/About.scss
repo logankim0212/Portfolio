@@ -1,0 +1,36 @@
+.about {
+  .header-section {
+    text-align: center;
+  }
+  .content {
+    &__img {
+      width: 25vw;
+      margin: 50px 5% 3% 0;
+      float: left;
+      transform: rotate(-2deg);
+      box-shadow: 2px 2px 50px rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+    }
+
+    &__txt {
+      display: inline;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .content {
+      text-align: center;
+      &__img {
+        width: 50vw;
+        margin: 30px auto 50px;
+        float: none;
+        text-align: center;
+      }
+
+      &__txt {
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+}

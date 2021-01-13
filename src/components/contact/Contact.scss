@@ -1,0 +1,76 @@
+.contact {
+  .wrap {
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 80vh;
+  }
+
+  .left, .right {
+    width: 40vw;
+    height: 600px;
+  }
+
+  a, a:hover {
+    text-decoration: none;
+    color: #fafafa;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: #c5b358;
+  }
+
+  .outer-section {
+    margin: 40px 0;
+    font-size: 1.2em;
+    width: 100%;
+  }
+
+  .icon-section {
+    display: inline-block;
+    line-height: 3em;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .content-section {
+    display: inline-block;
+    line-height: 3em;
+    padding-left: 5%;
+    font-weight: bold;
+    width: 450px;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .mailbox {
+    width: 33vw;
+    opacity: .7;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    .content-section {
+      display: inline-block;
+      text-align: center;
+      line-height: 2em;
+      padding-left: 0;
+      font-weight: bold;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+    @media only screen and (max-width: 1000px) {
+    .left {
+      width: 80vw;
+      height: 600px;
+    }
+
+    .right {
+      display: none;
+    }
+  }
+}
