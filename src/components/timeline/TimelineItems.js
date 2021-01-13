@@ -222,7 +222,7 @@ export const TimelineItems = [
     },
     {
         dateRange: 'September 2017 - December 2020',
-        title: 'Ontario College Advanced Diploma (High Honours), <br/>Software Engineering Technology (Co-op)',
+        title: 'Ontario College Advanced Diploma (High Honours), Software Engineering Technology (Co-op)',
         company: 'Centennial College',
         duties: [
             'Senior student researcher of Centennial College\'s applied research centre, 2020',
