@@ -116,16 +116,19 @@
   left: 0;
   right: 0;
   height: 100vh;
-  width: 100vw;
+  width: 98vw;
   background-color: #0e1111;
-//background-color: #fafafa;
   opacity: 0;
   transition: .3s;
   text-align: center;
 }
 
 .loaderIcon {
-  margin-top: 45vh;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 
@@ -149,4 +152,10 @@
 .fade-exit.fade-exit-active {
   opacity: 0;
   transition: opacity 400ms linear;
+}
+
+@media only screen and (max-width: 1000px) {
+  .loader {
+    width: 92vw;
+  }
 }
