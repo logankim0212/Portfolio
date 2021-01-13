@@ -20,75 +20,75 @@ export const TimelineItems = [
         techStacks: [
             {
                 altTxt: 'Java',
-                link: '/images/techStacks/java.png'
+                link: './images/techStacks/java.png'
             },
             {
                 altTxt: 'Spring',
-                link: '/images/techStacks/spring.svg'
+                link: './images/techStacks/spring.svg'
             },
             {
                 altTxt: 'Microsoft SQL Server',
-                link: '/images/techStacks/mssql.png'
+                link: './images/techStacks/mssql.png'
             },
             {
                 altTxt: 'Junit5',
-                link: '/images/techStacks/junit5.png'
+                link: './images/techStacks/junit5.png'
             },
             {
                 altTxt: 'REST-assured',
-                link: '/images/techStacks/rest-assured.png'
+                link: './images/techStacks/rest-assured.png'
             },
             {
                 altTxt: 'Project Lombok',
-                link: '/images/techStacks/projectLombok.png'
+                link: './images/techStacks/projectLombok.png'
             },
             {
                 altTxt: 'Amazon Web Service',
-                link: '/images/techStacks/aws.png'
+                link: './images/techStacks/aws.png'
             },
             {
                 altTxt: 'Microsoft Azure',
-                link: '/images/techStacks/azure.png'
+                link: './images/techStacks/azure.png'
             },
             {
                 altTxt: 'Jenkins',
-                link: '/images/techStacks/jenkins.png'
+                link: './images/techStacks/jenkins.png'
             },
             {
                 altTxt: 'Docker',
-                link: '/images/techStacks/docker.png'
+                link: './images/techStacks/docker.png'
             },
             {
                 altTxt: 'Google Cloud Platform',
-                link: '/images/techStacks/gcp.webp'
+                link: './images/techStacks/gcp.webp'
             },
             {
                 altTxt: 'MQTT',
-                link: '/images/techStacks/mqtt.png'
+                link: './images/techStacks/mqtt.png'
             },
             {
                 altTxt: 'Git',
-                link: '/images/techStacks/git.png'
+                link: './images/techStacks/git.png'
             },
             {
                 altTxt: 'GitHub',
-                link: '/images/techStacks/github.png'
+                link: './images/techStacks/github.png'
             },
             {
                 altTxt: 'Jira',
-                link: '/images/techStacks/jira.svg'
+                link: './images/techStacks/jira.svg'
             },
             {
                 altTxt: 'Confluence',
-                link: '/images/techStacks/confluence.png'
+                link: './images/techStacks/confluence.png'
             },
             {
                 altTxt: 'Trello',
-                link: '/images/techStacks/trello.png'
+                link: './images/techStacks/trello.png'
             },
             {
                 altTxt: 'Adobe XD',
-                link: '/images/techStacks/adobe-xd.png'
+                link: './images/techStacks/adobe-xd.png'
             }
         ]
     },
@@ -114,51 +114,51 @@ export const TimelineItems = [
         techStacks: [
             {
                 altTxt: 'JavaScript',
-                link: '/images/techStacks/javascript.png'
+                link: './images/techStacks/javascript.png'
             },
             {
                 altTxt: 'HTML',
-                link: '/images/techStacks/html.png'
+                link: './images/techStacks/html.png'
             },
             {
                 altTxt: 'CSS',
-                link: '/images/techStacks/css.png'
+                link: './images/techStacks/css.png'
             },
             {
                 altTxt: 'SASS',
-                link: '/images/techStacks/sass.png'
+                link: './images/techStacks/sass.png'
             },
             {
                 altTxt: 'C#',
-                link: '/images/techStacks/c-sharp.svg'
+                link: './images/techStacks/c-sharp.svg'
             },
             {
                 altTxt: 'jQuery',
-                link: '/images/techStacks/jquery.png'
+                link: './images/techStacks/jquery.png'
             },
             {
                 altTxt: 'Oracle',
-                link: '/images/techStacks/oracle.png'
+                link: './images/techStacks/oracle.png'
             },
             {
                 altTxt: 'PHP',
-                link: '/images/techStacks/php.svg'
+                link: './images/techStacks/php.svg'
             },
             {
                 altTxt: 'MySQL',
-                link: '/images/techStacks/mysql.png'
+                link: './images/techStacks/mysql.png'
             },
             {
                 altTxt: 'Wordpress.org',
-                link: '/images/techStacks/wordpress.png'
+                link: './images/techStacks/wordpress.png'
             },
             {
                 altTxt: 'Git',
-                link: '/images/techStacks/git.png'
+                link: './images/techStacks/git.png'
             },
             {
                 altTxt: 'GitHub',
-                link: '/images/techStacks/github.png'
+                link: './images/techStacks/github.png'
             }
         ]
     },
@@ -180,43 +180,43 @@ export const TimelineItems = [
         techStacks: [
             {
                 altTxt: 'JavaScript',
-                link: '/images/techStacks/javascript.png'
+                link: './images/techStacks/javascript.png'
             },
             {
                 altTxt: 'HTML',
-                link: '/images/techStacks/html.png'
+                link: './images/techStacks/html.png'
             },
             {
                 altTxt: 'CSS',
-                link: '/images/techStacks/css.png'
+                link: './images/techStacks/css.png'
             },
             {
                 altTxt: 'jQuery',
-                link: '/images/techStacks/jquery.png'
+                link: './images/techStacks/jquery.png'
             },
             {
                 altTxt: 'Oracle',
-                link: '/images/techStacks/oracle.png'
+                link: './images/techStacks/oracle.png'
             },
             {
                 altTxt: 'PHP',
-                link: '/images/techStacks/php.svg'
+                link: './images/techStacks/php.svg'
             },
             {
                 altTxt: 'MySQL',
-                link: '/images/techStacks/mysql.png'
+                link: './images/techStacks/mysql.png'
             },
             {
                 altTxt: 'Wordpress.org',
-                link: '/images/techStacks/wordpress.png'
+                link: './images/techStacks/wordpress.png'
             },
             {
                 altTxt: 'Git',
-                link: '/images/techStacks/git.png'
+                link: './images/techStacks/git.png'
             },
             {
                 altTxt: 'GitHub',
-                link: '/images/techStacks/github.png'
+                link: './images/techStacks/github.png'
             }
         ]
     },
@@ -233,15 +233,15 @@ export const TimelineItems = [
         techStacks: [
             {
                 altTxt: 'Centennial College',
-                link: '/images/techStacks/centennial-college.jpeg'
+                link: './images/techStacks/centennial-college.jpeg'
             },
             {
                 altTxt: 'CCSAI',
-                link: '/images/techStacks/ccsai.png'
+                link: './images/techStacks/ccsai.png'
             },
             {
                 altTxt: 'WIMTACH',
-                link: '/images/techStacks/wimtach.png'
+                link: './images/techStacks/wimtach.png'
             },
         ]
     }

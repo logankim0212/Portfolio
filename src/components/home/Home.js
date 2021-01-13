@@ -128,7 +128,7 @@ class Home extends Component {
                         </div>
                         <div className={'section vertical-bottom b'}>
                             <img className={'profile-image'}
-                                 src={'/Portfolio/images/profile.png'}
+                                 src={'./images/profile.png'}
                                  alt={'Logan Kim\'s portrait'}/>
                         </div>
                     </div>

@@ -123,7 +123,7 @@ export default class Contact extends Component {
                         </div>
                         <div className="right vertical-middle">
                             {/*source: http://maymktg.com/wp-content/uploads/2013/10/mail-sketch.png*/}
-                            <img className={'mailbox'} src={'/Portfolio/images/mailbox.png'} alt="Mailbox sketch"/>
+                            <img className={'mailbox'} src={'./images/mailbox.png'} alt="Mailbox sketch"/>
                         </div>
                     </div>
                 </section>

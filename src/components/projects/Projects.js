@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import '../projects/Projects.scss';
 import {TweenMax} from "gsap";
+import {ProjectItems} from "./ProjectItems";
 
 export default class Projects extends Component {
     componentDidMount() {
@@ -48,7 +49,16 @@ export default class Projects extends Component {
                         <hr className={'divider center'}/>
                         <div className="content">
                             <div className="content--inner">
-                                <p className="content--excerpt">Coming soon...</p>
+                                <p className="project-submenu">Links to the each project will be here</p>
+                                {
+                                    ProjectItems.map((item, index) => {
+                                        return (
+                                            <div className={'row-full'}>
+                                                {item.title}
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
