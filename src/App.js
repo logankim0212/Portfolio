@@ -48,7 +48,7 @@ class App extends Component {
         return (
             <Router>
                 <Navbar/>
-                <Route render={({location}) => (
+                <Route basename="/Portfolio" render={({location}) => (
                     <TransitionGroup>
                         <CSSTransition
                             key={location.key}
