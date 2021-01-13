@@ -164,7 +164,7 @@
   }
 
   @media only screen and (max-width: 1000px) {
-    overflow-x: hidden;
+    //overflow: hidden;
 
     .flex {
       display: flex;
@@ -173,7 +173,6 @@
 
     .a {
       order: 2;
-      padding-bottom: 5rem;
     }
 
     .b {

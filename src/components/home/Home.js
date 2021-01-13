@@ -11,7 +11,8 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            loading: false
+            loading: false,
+            width: window.innerWidth
         }
 
         this.onButtonClicked = this.onButtonClicked.bind(this);
@@ -54,15 +55,27 @@ class Home extends Component {
             }
         );
 
-        TweenMax.from([profileImage], 1.3, {
-            delay: 1.7,
-            ease: "power3.out",
-            x: 150,
-            opacity: 0,
-            stagger: {
-                amount: 0.15
-            }
-        });
+        if (this.state.width <= 1000) {
+            TweenMax.from([profileImage], 1.3, {
+                delay: 1.7,
+                ease: "power3.out",
+                y: 100,
+                opacity: 0,
+                stagger: {
+                    amount: 0.15
+                }
+            });
+        } else {
+            TweenMax.from([profileImage], 1.3, {
+                delay: 1.7,
+                ease: "power3.out",
+                x: 150,
+                opacity: 0,
+                stagger: {
+                    amount: 0.15
+                }
+            });
+        }
 
         TweenMax.from([button], 1.3, {
             delay: 1.9,

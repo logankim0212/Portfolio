@@ -14,15 +14,20 @@ class Navbar extends Component {
         this.toggleMenuIcon = this.toggleMenuIcon.bind(this);
         this.headerClicked = this.headerClicked.bind(this);
         this.linkClicked = this.linkClicked.bind(this);
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
         this.state = {
             active: false,
-            updating: false
+            updating: false,
+            windowWidth: 0,
+            windowHeight: 0
         };
     }
 
     componentDidMount() {
         this.props.fetchLoading();
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
     }
 
     componentDidUpdate = () => {
@@ -31,6 +36,25 @@ class Navbar extends Component {
         let navLink = document.querySelectorAll(".nav-links");
         let active = document.querySelector(".active");
         let opened = document.querySelector(".opened");
+
+        if (this.state.windowWidth <= 1000) {
+            if (this.state.active) {
+                logoStyle.pointerEvents = "auto";
+                for (let i = 0; i < navLink.length; i++) {
+                    navLink[i].style.pointerEvents = "auto";
+                }
+            } else {
+                logoStyle.pointerEvents = "none";
+                for (let i = 0; i < navLink.length; i++) {
+                    navLink[i].style.pointerEvents = "none";
+                }
+            }
+        } else {
+            logoStyle.pointerEvents = "auto";
+            for (let i = 0; i < navLink.length; i++) {
+                navLink[i].style.pointerEvents = "auto";
+            }
+        }
 
         if (!this.state.updating && this.props.storage.loading) {
             this.setState({
@@ -79,6 +103,17 @@ class Navbar extends Component {
                 });
             }, 3000)
         }
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight
+        });
     }
 
     toggleMenuIcon() {
