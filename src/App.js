@@ -7,7 +7,6 @@ import {
     TransitionGroup,
 } from 'react-transition-group';
 import {TweenMax} from 'gsap';
-import { createHashHistory } from 'history';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -16,12 +15,6 @@ import Timeline from './components/timeline/Timeline';
 import Contact from './components/contact/Contact';
 
 class App extends Component {
-    history = createHashHistory({
-        basename: "Portfolio",
-        hashType: "slash",
-        getUserConfirmation: (message, callback) => callback(window.confirm(message)),
-    });
-
     render() {
         const onEnter = node => {
             TweenMax.from(
@@ -55,7 +48,7 @@ class App extends Component {
         return (
             <Router>
                 <Navbar/>
-                <Route history={this.history} render={({location}) => (
+                <Route render={({location}) => (
                     <TransitionGroup>
                         <CSSTransition
                             key={location.key}
@@ -66,11 +59,11 @@ class App extends Component {
                             onEntering={onEnter}
                             unmountOnExit>
                             <Switch location={location}>
-                                <Route exact path={'/'} component={Home}/>
-                                <Route exact path={'/about'} component={About}/>
-                                <Route exact path={'/projects'} component={Projects}/>
-                                <Route exact path={'/timeline'} component={Timeline}/>
-                                <Route exact path={'/contact'} component={Contact}/>
+                                <Route exact path={'/Portfolio/'} component={Home}/>
+                                <Route exact path={'/Portfolio/about'} component={About}/>
+                                <Route exact path={'/Portfolio/projects'} component={Projects}/>
+                                <Route exact path={'/Portfolio/timeline'} component={Timeline}/>
+                                <Route exact path={'/Portfolio/contact'} component={Contact}/>
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>

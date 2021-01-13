@@ -162,7 +162,7 @@ export default class Timeline extends Component {
                                                                 return (
                                                                     <div className={'tech-stack-wrapper'}>
                                                                         <img className={'tech-stack-image'}
-                                                                             src={item.link}
+                                                                             src={'/Portfolio' + item.link}
                                                                              title={item.altTxt}
                                                                              alt={'logo of ' + item.altTxt}/>
                                                                         <div className="middle-wrapper translate middle">
