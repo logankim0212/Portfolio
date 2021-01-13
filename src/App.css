@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fafafa;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #c5b358;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,76 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  height: 85vh;
+}
+
+.content {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 2vh 0;
+  font-size: 1.1em;
+}
+
+.color {
+  color: #c5b358;
+}
+
+.divider {
+  border: 1px solid #fafafa;
+  width: 200px;
+  margin: 20px 0 0;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vertical-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vertical-bottom {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.page {
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  /*text-transform: uppercase;*/
+  font-family: Marker Felt, fantasy;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms linear 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms linear;
 }

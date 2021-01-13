@@ -1,0 +1,84 @@
+.navbar {
+  height: 15vh;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 10vw;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.logo-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #c5b358;
+}
+
+.menu {
+  display: inline-block;
+  position: absolute;
+  right: 5vw;
+}
+
+ul {
+  margin: 0 auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 40vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+.nav-links {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-links:hover {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.nav-links:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.active {
+  color: #c5b358;
+  cursor: none;
+  pointer-events: none;
+}
+
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
