@@ -13,6 +13,7 @@ import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Timeline from './components/timeline/Timeline';
 import Contact from './components/contact/Contact';
+import NotFound from './components/404/NotFound'
 
 class App extends Component {
     render() {
@@ -64,6 +65,7 @@ class App extends Component {
                                 <Route exact path={'/Portfolio/projects'} component={Projects}/>
                                 <Route exact path={'/Portfolio/timeline'} component={Timeline}/>
                                 <Route exact path={'/Portfolio/contact'} component={Contact}/>
+                                <Route exact path='*' component={NotFound} />
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>
