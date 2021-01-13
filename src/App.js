@@ -7,6 +7,7 @@ import {
     TransitionGroup,
 } from 'react-transition-group';
 import {TweenMax} from 'gsap';
+import { createHashHistory } from 'history';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -15,6 +16,12 @@ import Timeline from './components/timeline/Timeline';
 import Contact from './components/contact/Contact';
 
 class App extends Component {
+    history = createHashHistory({
+        basename: "Portfolio",
+        hashType: "slash",
+        getUserConfirmation: (message, callback) => callback(window.confirm(message)),
+    });
+
     render() {
         const onEnter = node => {
             TweenMax.from(
@@ -48,7 +55,7 @@ class App extends Component {
         return (
             <Router>
                 <Navbar/>
-                <Route basename="/Portfolio" render={({location}) => (
+                <Route history={this.history} render={({location}) => (
                     <TransitionGroup>
                         <CSSTransition
                             key={location.key}
