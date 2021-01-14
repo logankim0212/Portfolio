@@ -133,7 +133,7 @@ export default class Projects extends Component {
                                     <div key={index} className={'panel'}>
                                         <div className={'sub-panel a'}>
                                             <div className={'line-wrap'}>
-                                                <h3 className={'project-title project-title' + (index + 1)}>{item.title}</h3>
+                                                <h3 className={'project-title color project-title' + (index + 1)}>{item.title}</h3>
                                             </div>
                                             <p className={'project-description' + (index + 1)}>{item.description}</p>
                                             <div className={'project-button' + (index + 1)}>
