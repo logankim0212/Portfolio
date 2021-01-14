@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
 import '../projects/Projects.scss';
-import {TweenMax} from "gsap";
+import {gsap, TweenMax} from "gsap";
 import {ProjectItems} from "./ProjectItems";
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {Link} from "react-router-dom";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default class Projects extends Component {
     componentDidMount() {
@@ -38,9 +42,6 @@ export default class Projects extends Component {
                 <section id="colorlib-hero" className="js-fullheight project" data-section="projects">
                     <div className="view main content">
                         <div className={'first-screen'}>
-                            <img className="star"
-                                 src="./images/flare.png" alt={'Star'}/>
-
                             <div className={'line-wrap'}>
                                 <h1 className={'header color'}>Remember that wherever your heart is, there you will
                                     find your treasure</h1>
@@ -51,19 +52,44 @@ export default class Projects extends Component {
                                 </div>
                             </div>
                             <hr className={'divider center'}/>
-                            <p className="project-submenu">Links to the each project will be here</p>
+                            <div className={'background-text'}>Projects</div>
+                            <div className="scroll-downs">
+                                <div className="mouse">
+                                    <div className="scroller"/>
+                                </div>
+                            </div>
                         </div>
-                        <div className="content--inner">
-                            {
-                                ProjectItems.map((item, index) => {
-                                    return (
-                                        <div className={'row-full'}>
-                                            {item.title}
+                        {
+                            ProjectItems.map((item, index) => {
+                                return (
+                                    <div key={index} className={'panel'}>
+                                        <div className={'sub-panel a'}>
+                                            <h3 className={'project-title'}>{item.title}</h3>
+                                            <p>{item.description}</p>
+                                            <a href={item.projectLink} target="_blank">
+                                                <div className="button">
+                                                    <div className="inner-button-1">
+                                                        <div className="inner-button-2">
+                                                            <div className="inner-button-3">
+                                                                <div className="inner-button-4">
+                                                                    <div className="inner-button-content">
+                                                                        <span className="button-text">View Project</span>
+                                                                        <span className="hover-button-text">View Project</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
-                                    )
-                                })
-                            }
-                        </div>
+                                        <div className={'sub-panel b'}>
+                                            <img className={'project-image'} src={item.imageLink} alt={'screenshots of ' + item.title} />
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </section>
             </div>

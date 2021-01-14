@@ -33,6 +33,8 @@ class Navbar extends Component {
     componentDidUpdate = () => {
         let loaderStyle = document.querySelector(".loader").style;
         let logoStyle = document.querySelector(".logo-link").style;
+        let menuListA = document.querySelector(".menu-ul");
+        let menuListB = document.querySelectorAll(".menu-li");
         let navLink = document.querySelectorAll(".nav-links");
         let active = document.querySelector(".active");
         let opened = document.querySelector(".opened");
@@ -40,19 +42,24 @@ class Navbar extends Component {
         if (this.state.windowWidth <= 1000) {
             if (this.state.active) {
                 logoStyle.zIndex = "1";
-                for (let i = 0; i < navLink.length; i++) {
-                    navLink[i].style.zIndex = "1";
+                menuListA.style.display = "table";
+                for (let i = 0; i < menuListB.length; i++) {
+                    menuListB[i].style.zIndex = "10";
                 }
             } else {
                 logoStyle.zIndex = "-1";
-                for (let i = 0; i < navLink.length; i++) {
-                    navLink[i].style.zIndex = "-1";
-                }
+                setTimeout(() => {
+                    menuListA.style.display = "none";
+                    for (let i = 0; i < menuListB.length; i++) {
+                        menuListB[i].style.zIndex = "-10";
+                    }
+                }, 200)
             }
         } else {
             logoStyle.zIndex = "1";
-            for (let i = 0; i < navLink.length; i++) {
-                navLink[i].style.zIndex = "1";
+            menuListA.style.display = "table";
+            for (let i = 0; i < menuListB.length; i++) {
+                menuListB[i].style.zIndex = "10";
             }
         }
 

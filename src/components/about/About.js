@@ -75,7 +75,7 @@ export default class About extends Component {
                             <img className="content__img" src={'/Portfolio/images/about.jpg'}
                                  alt={'Logan playing an acoustic guitar around a campfire'}/>
                             <div className="content__txt">
-                                <p>while(passion) &#123; this.buildNext(withNewIdea); &#125;</p>
+                                <p>while(passion) &#123; this.buildNext(idea++); &#125;</p>
                                 <p>I always liked playing with LEGO blocks in my childhood. I was fascinated to see so
                                     many different outcomes that I could have with the same number of blocks. I never
                                     got tired of it as I could simply break and build another world of my own once I was
