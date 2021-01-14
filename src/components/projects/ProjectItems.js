@@ -13,8 +13,14 @@ export const ProjectItems = [
     },
     {
         title: 'Fury, The Destroyer',
-        description: 'Web-based single screen PvP submarine game.',
+        description: 'Web-based single screen PvP submarine game for 2 players.',
         imageLink: './images/projects/fury.png',
         projectLink: 'https://cosmos-games.github.io/Fury-The_Destroyer/'
+    },
+    {
+        title: 'Zombie Rider',
+        description: '2-dimensional top-down single player scrolling game designed with Days Gone theme.',
+        imageLink: './images/projects/zombie-rider.png',
+        projectLink: 'https://logankim0212.github.io/COMP-397/Assignment02/LoganKim_COMP397_Lab02/'
     }
 ]
