@@ -151,7 +151,7 @@ export default class Timeline extends Component {
                                                         {
                                                             item.duties.map((item, index) => {
                                                                 return (
-                                                                    <li>{item}</li>
+                                                                    <li key={index}>{item}</li>
                                                                 )
                                                             })
                                                         }
@@ -160,7 +160,7 @@ export default class Timeline extends Component {
                                                         {
                                                             item.techStacks.map((item, index) => {
                                                                 return (
-                                                                    <div className={'tech-stack-wrapper'}>
+                                                                    <div key={index} className={'tech-stack-wrapper'}>
                                                                         <img className={'tech-stack-image'}
                                                                              src={item.link}
                                                                              title={item.altTxt}
