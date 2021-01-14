@@ -46,7 +46,9 @@ export default class Timeline extends Component {
             }
         });
 
-        for (let i = 1; i <= 4; i++) {
+        let timelineEvents = document.querySelectorAll(".timeline-event");
+
+        for (let i = 1; i <= timelineEvents.length; i++) {
             let timelineIcon = document.querySelector(".timeline-event-icon" + i);
             let timelineThumbnail = document.querySelector(".timeline-event-thumbnail" + i);
             let timelineTitle = document.querySelector(".timeline-title" + i);
