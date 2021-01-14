@@ -74,6 +74,7 @@ export default class Timeline extends Component {
                 duration: 0.5,
                 ease: "ease.out",
                 y: 200,
+                opacity: 0,
                 stagger: {
                     amount: 0.15
                 },
