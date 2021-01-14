@@ -1,7 +1,7 @@
 export const ProjectItems = [
     {
         title: 'ProHub',
-        description: 'Web and mobile applications that meet all of the communication needs of landlords, staff, and tenants.',
+        description: 'Web application that meets all of the communication needs of landlords, staff, and tenants.',
         imageLink: './images/projects/prohub.png',
         projectLink: 'https://codepros2020.github.io/ProHub/'
     },
