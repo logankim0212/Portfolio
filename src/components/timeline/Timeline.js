@@ -20,6 +20,7 @@ export default class Timeline extends Component {
             delay: 1.3,
             ease: "power3.out",
             y: 100,
+            opacity: 0,
             stagger: {
                 amount: 0.15
             }

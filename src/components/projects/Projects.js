@@ -8,6 +8,14 @@ import {Link} from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 export default class Projects extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            width: window.innerWidth
+        }
+    }
+
     componentDidMount() {
         document.title = "Projects - Logan's Portfolio";
 
@@ -19,6 +27,7 @@ export default class Projects extends Component {
             delay: 1.3,
             ease: "power3.out",
             y: 100,
+            opacity: 0,
             stagger: {
                 amount: 0.15
             }
@@ -89,18 +98,33 @@ export default class Projects extends Component {
                 },
             });
 
-            gsap.from([projectImage], {
-                duration: 1,
-                x: 100,
-                opacity: 0,
-                ease: "power3.inOut",
-                scrollTrigger: {
-                    trigger: [projectImage],
-                    start: 'top 95%',/**/
-                    end: 'bottom 10%',
-                    toggleActions: 'restart reverse restart reverse'
-                },
-            });
+            if (this.state.width <= 1000) {
+                gsap.from([projectImage], {
+                    duration: 1,
+                    y: 100,
+                    opacity: 0,
+                    ease: "power3.inOut",
+                    scrollTrigger: {
+                        trigger: [projectImage],
+                        start: 'top 95%',/**/
+                        end: 'bottom 10%',
+                        toggleActions: 'restart reverse restart reverse'
+                    },
+                });
+            } else {
+                gsap.from([projectImage], {
+                    duration: 1,
+                    x: 100,
+                    opacity: 0,
+                    ease: "power3.inOut",
+                    scrollTrigger: {
+                        trigger: [projectImage],
+                        start: 'top 95%',/**/
+                        end: 'bottom 10%',
+                        toggleActions: 'restart reverse restart reverse'
+                    },
+                });
+            }
         }
     }
 
