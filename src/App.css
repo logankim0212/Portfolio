@@ -37,14 +37,10 @@
   }
 }
 
-.main {
-  height: 85vh;
-}
-
 .content {
   width: 80vw;
   margin: 0 auto;
-  padding: 2vh 0;
+  padding: 7vh 0;
   font-size: 1.1em;
 }
 
@@ -93,7 +89,7 @@
 
 .page {
   position: absolute;
-  top: 15vh;
+  top: 10vh;
   left: 0;
   right: 0;
 }

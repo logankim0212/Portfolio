@@ -71,7 +71,7 @@ export default class About extends Component {
                             </div>
                             <hr className={'divider center'}/>
                         </div>
-                        <div className="content">
+                        <div className={'about-content'}>
                             <img className="content__img" src={'/Portfolio/images/about.jpg'}
                                  alt={'Logan playing an acoustic guitar around a campfire'}/>
                             <div className="content__txt">

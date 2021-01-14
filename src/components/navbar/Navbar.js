@@ -39,20 +39,20 @@ class Navbar extends Component {
 
         if (this.state.windowWidth <= 1000) {
             if (this.state.active) {
-                logoStyle.pointerEvents = "auto";
+                logoStyle.zIndex = "1";
                 for (let i = 0; i < navLink.length; i++) {
-                    navLink[i].style.pointerEvents = "auto";
+                    navLink[i].style.zIndex = "1";
                 }
             } else {
-                logoStyle.pointerEvents = "none";
+                logoStyle.zIndex = "-1";
                 for (let i = 0; i < navLink.length; i++) {
-                    navLink[i].style.pointerEvents = "none";
+                    navLink[i].style.zIndex = "-1";
                 }
             }
         } else {
-            logoStyle.pointerEvents = "auto";
+            logoStyle.zIndex = "1";
             for (let i = 0; i < navLink.length; i++) {
-                navLink[i].style.pointerEvents = "auto";
+                navLink[i].style.zIndex = "1";
             }
         }
 
@@ -128,7 +128,9 @@ class Navbar extends Component {
         this.props.enableLoading();
 
         window.scrollTo(0, 0);
-        this.toggleMenuIcon();
+        if (this.state.windowWidth <= 1000) {
+            this.toggleMenuIcon();
+        }
     }
 
     headerClicked() {
