@@ -91,6 +91,11 @@ class Home extends Component {
     }
 
     render() {
+        const description = 'My path in software engineering began in 2017. Since then, I\'ve completed my advanced ' +
+            'technology diploma in software engineering with high honours and gained professional experience in both ' +
+            'private and public sectors to broaden my horizons. I am currently a senior software engineer at an ' +
+            'applied research centre of Centennial College.';
+
         return (
             <div className={'page'}>
                 <section id="colorlib-hero" className="js-fullheight home" data-section="home">
@@ -104,12 +109,7 @@ class Home extends Component {
                                     <em>Software Engineer</em>
                                 </p>
                             </div>
-                            <p className={'description'}>
-                                Hi there, I'm Logan. My path in software engineering began in 2017. Since then, I've
-                                completed my advanced technology diploma in software engineering with high honours
-                                and gained professional experience in both private and public sectors to broaden my
-                                horizons. I am currently a senior software engineer at an applied research centre of
-                                Centennial College.</p>
+                            <p className={'description'}>{description}</p>
                             <Link to={'/projects'} onClick={this.onButtonClicked}>
                                 <div className="button">
                                     <div className="inner-button-1">
