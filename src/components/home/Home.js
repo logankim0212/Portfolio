@@ -91,6 +91,8 @@ class Home extends Component {
     }
 
     render() {
+        const name = 'Logan J. Kim';
+        const title = 'Software Engineer';
         const description = 'My path in software engineering began in 2017. Since then, I\'ve completed my advanced ' +
             'technology diploma in software engineering with high honours and gained professional experience in both ' +
             'private and public sectors to broaden my horizons. I am currently a senior software engineer at an ' +
@@ -102,11 +104,11 @@ class Home extends Component {
                     <div className="flexslider js-fullheight main flex">
                         <div className={'section vertical-middle a'}>
                             <div className={'line-wrap'}>
-                                <h1 className={'name color'}>Logan J. Kim</h1>
+                                <h1 className={'name color'}>{name}</h1>
                             </div>
                             <div className={'line-wrap'}>
                                 <p className={'title color job'}>
-                                    <em>Software Engineer</em>
+                                    <em>{title}</em>
                                 </p>
                             </div>
                             <p className={'description'}>{description}</p>

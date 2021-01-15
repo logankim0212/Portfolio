@@ -87,22 +87,10 @@ export default class About extends Component {
                                 <p>Software engineering calls to all the passions that I had with LEGO blocks ever
                                     since I was a kid. In a virtual environment, I can build my own world as many and as
                                     big as I want with unlimited resources incorporating my creativity. Codes can be
-                                    reused and there is always room for improvement. Shout out to the software community
-                                    for sharing many open sources and welcoming beginners. Since I learned about the
+                                    reused and there is always room for improvement. Since I learned about the
                                     world of software engineering, I knew this is the career that I would love to pursue
                                     for the rest of my life.</p>
-                                <p>I still vividly recall my first semester as a software engineering major. I built my
-                                    first web page in HTML and CSS, as well as a simple calculator in C# that has been
-                                    made many people’s lives easy for a long time. I studied as hard as I could as I
-                                    felt a thirst for knowledge. I loved to learn new languages and technologies,
-                                    implemented them to see better outcomes with an easier way to develop. Then, I
-                                    realized that I desire to see people around me benefited from my own works and I
-                                    need to gain more experience to learn how to be more practical. This led me to join
-                                    a co-op program. More than a year of professional experience not only allowed me to
-                                    visualize how to transform my academic knowledge to practical use, it also taught me
-                                    how to explore and use various enterprise-level technologies.</p>
-                                <p>As a software engineer who graduated in December 2020 with high honours, my
-                                    expertise lies in the following:</p>
+                                <p>As a software engineer, my expertise lies in the following:</p>
                                 <ul>
                                     <li><strong>Languages:</strong> Java, JavaScript, C# (.NET), Python, HTML, CSS,
                                         TypeScript, SQL, PL/SQL, PHP
