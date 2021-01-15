@@ -80,8 +80,8 @@ export default class About extends Component {
                                 <p className={'about-text'}>Hey there! I'm Logan Kim. Feel free to call me Logan.</p>
                                 <br/>
                                 <h2 className={'about-title'}>I am an creative software engineer in Toronto.</h2>
-                                <p className={'about-text'}>I'm also a good friend, passionate reader, part-time foodie,
-                                    travel enthusiast, movie fanatic, ex lead guitarist of a Korean rock band THE'Z.</p>
+                                <p className={'about-text'}>I'm also a good friend, a passionate reader, a part-time foodie,
+                                    a travel enthusiast, a movie fanatic, and an ex lead guitarist of a Korean rock band THE'Z.</p>
                                 <br/>
                                 <br/>
                                 <h2 className={'about-title'}>What makes me different?</h2>
