@@ -110,7 +110,7 @@ class Home extends Component {
                                 and gained professional experience in both private and public sectors to broaden my
                                 horizons. I am currently a senior software engineer at an applied research centre of
                                 Centennial College.</p>
-                            <Link to={'/Portfolio/projects'} onClick={this.onButtonClicked}>
+                            <Link to={'/projects'} onClick={this.onButtonClicked}>
                                 <div className="button">
                                     <div className="inner-button-1">
                                         <div className="inner-button-2">

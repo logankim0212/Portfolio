@@ -9,7 +9,7 @@ export default class NotFound extends Component {
                     <div className="view main content">
                         <div className="error">404</div>
                         <br/><br/>
-                        <span className="info">File not found</span>
+                        <span className="info">Page not found</span>
                     </div>
                 </section>
             </div>
