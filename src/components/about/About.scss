@@ -1,28 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap&family=Kaushan+Script&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .about {
   .header-section {
     text-align: center;
   }
+
   .about-content {
     margin-top: 3rem;
   }
+
+  .about-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    margin-bottom: 2rem;
+    text-shadow: -1px -1px 0 #fafafa, 1px -1px 0 #fafafa, -1px 1px 0 #fafafa, 1px 1px 0 #fafafa;
+    color: #0e1111;
+  }
+
+  .about-skills {
+    margin: 5rem 0;
+  }
+
+  .about-tech {
+    width: 100%;
+    margin: 7rem auto 10rem;
+  }
+
+  .about-tech-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.5em;
+  }
+
+  .about-tech-image {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.15);
+    opacity: 0.8;
+  }
+
+  .about-tech-panel {
+    display: inline-block;
+    width: 40vw;
+    padding: 2rem;
+    vertical-align: middle;
+  }
+
+  .l {
+    margin-right: 5vw;
+  }
+
+  .r {
+    margin-left: 5vw;
+  }
+
+  .about-tech-area {
+    width: 36vw;
+    margin-top: 50px;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 1);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
   .content {
     &__img {
-      width: 25vw;
-      margin: 50px 5% 3% 0;
-      float: left;
+      vertical-align: middle;
+
+      width: 20vw;
+      display: inline-block;
+      margin: 0 2vw;
       //transform: rotate(-2deg);
       box-shadow: 2px 2px 50px rgba(255, 255, 255, 0.15);
       border-radius: 10px;
     }
 
     &__txt {
-      display: inline;
+      vertical-align: middle;
+
+      display: inline-block;
+      width: 52vw;
+      margin: 0 2vw;
     }
   }
 
   @media only screen and (max-width: 1000px) {
     .content {
       text-align: center;
+
       &__img {
         width: 50vw;
         margin: 30px auto 50px;

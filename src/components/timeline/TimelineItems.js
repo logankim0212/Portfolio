@@ -4,7 +4,8 @@ export const TimelineItems = [
         title: 'Senior Software Engineer',
         company: 'Centennial College: WIMTACH',
         duties: [
-            'Engineered a 10-month HCIS project developing interface modules and REST APIs in Java with Spring',
+            'Engineered a 10-month HCIS project, an EMR software serving 1.5 million Ontarians, developing interface ' +
+            'modules and REST APIs in Java with Spring',
             'Led a team of 7, using JUnit and REST Assured to implement an automation test suite on GitHub with ' +
             'Jenkins, as a part of CI pipeline, which reduced bugs by 40% and accelerated the deployment by 20%',
             'Increased resilience of applications by implementing Pub/Sub with Google Cloud or MQTT as an asynchronous ' +
@@ -73,6 +74,10 @@ export const TimelineItems = [
             {
                 altTxt: 'GitHub',
                 link: './images/techStacks/github.png'
+            },
+            {
+                altTxt: 'Swagger',
+                link: './images/techStacks/swagger.png'
             },
             {
                 altTxt: 'Jira',

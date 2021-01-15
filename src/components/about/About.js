@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import '../about/About.scss';
 import {TweenMax, TimelineMax} from "gsap";
+import {Languages, FrameworksAndLibraries, DbmsAndServers, DesignAndManagements} from "./AboutItems";
 
 export default class About extends Component {
     componentDidMount() {
@@ -76,34 +77,117 @@ export default class About extends Component {
                             <img className="content__img" src={'./images/about.jpg'}
                                  alt={'Logan playing an acoustic guitar around a campfire'}/>
                             <div className="content__txt">
-                                <p>while(passion) &#123; this.buildNext(idea++); &#125;</p>
-                                <p>I always liked playing with LEGO blocks in my childhood. I was fascinated to see so
-                                    many different outcomes that I could have with the same number of blocks. I never
-                                    got tired of it as I could simply break and build another world of my own once I was
-                                    done. A world that I built had its own beauty; however, I was not satisfied with
-                                    just one world as I knew my next world would enlighten me with the beauty of its
-                                    own. I could get an infinite number of my own beautiful worlds as long as I approach
-                                    them with different perspectives and creativity.</p>
-                                <p>Software engineering calls to all the passions that I had with LEGO blocks ever
-                                    since I was a kid. In a virtual environment, I can build my own world as many and as
-                                    big as I want with unlimited resources incorporating my creativity. Codes can be
-                                    reused and there is always room for improvement. Since I learned about the
-                                    world of software engineering, I knew this is the career that I would love to pursue
-                                    for the rest of my life.</p>
-                                <p>As a software engineer, my expertise lies in the following:</p>
-                                <ul>
-                                    <li><strong>Languages:</strong> Java, JavaScript, C# (.NET), Python, HTML, CSS,
-                                        TypeScript, SQL, PL/SQL, PHP
-                                    </li>
-                                    <li><strong>Frameworks/Libraries:</strong> Spring, ASP.NET, Angular, React, React
-                                        Native, Node.js, JUnit, Selenium
-                                    </li>
-                                    <li><strong>DBMS/Server:</strong> Firebase, Azure, AWS, Oracle, MySQL, MSSQL,
-                                        DynamoDB, MongoDB, J2EE, Jenkins
-                                    </li>
-                                </ul>
-                                <p>This is what keeps me up at night and I will not stop creating a new beautiful world
-                                    with my next creativity and passion. I can’t wait to share them with the world! </p>
+                                <p className={'about-text'}>Hey there! I'm Logan Kim. Feel free to call me Logan.</p>
+                                <br/>
+                                <h2 className={'about-title'}>I am an creative software engineer in Toronto.</h2>
+                                <p className={'about-text'}>I'm also a good friend, passionate reader, part-time foodie,
+                                    travel enthusiast, movie fanatic, ex lead guitarist of a Korean rock band THE'Z.</p>
+                                <br/>
+                                <br/>
+                                <h2 className={'about-title'}>What makes me different?</h2>
+                                <p className={'about-text'}>I approach from a different perspectives and deliver
+                                    efficient and effective solution
+                                    incorporating my creative mindset. This is what keeps me up at night and I will not
+                                    stop sharing my creativity and passion.</p>
+                            </div>
+                            <div className={'about-skills'}>
+                                <h2 className={'about-title'}>What can I offer?</h2>
+                                <div className={'about-tech'}>
+                                    <img className={'about-tech-image l'} src={'./images/about/roma-exterior.jpg'}
+                                         alt={'Engine room of Ferrari Roma'}/>
+                                    <div className={'about-tech-panel r'}>
+                                        <h3 className={'about-tech-title'}>Languages</h3>
+                                        <div className={'about-tech-area'}>
+                                            {
+                                                Languages.map((item, index) => {
+                                                    return (
+                                                        <div key={index} className={'tech-stack-wrapper'}>
+                                                            <img className={'tech-stack-image'}
+                                                                 src={item.link}
+                                                                 title={item.altTxt}
+                                                                 alt={'Logo of ' + item.altTxt}/>
+                                                            <div className="middle-wrapper translate middle">
+                                                                <span>{item.altTxt}</span>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={'about-tech'}>
+                                    <div className={'about-tech-panel l'}>
+                                        <h3 className={'about-tech-title'}>Frameworks & Libraries</h3>
+                                        <div className={'about-tech-area'}>
+                                            {
+                                                FrameworksAndLibraries.map((item, index) => {
+                                                    return (
+                                                        <div key={index} className={'tech-stack-wrapper'}>
+                                                            <img className={'tech-stack-image'}
+                                                                 src={item.link}
+                                                                 title={item.altTxt}
+                                                                 alt={'Logo of ' + item.altTxt}/>
+                                                            <div className="middle-wrapper translate middle">
+                                                                <span>{item.altTxt}</span>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </div>
+                                    <img className={'about-tech-image r'} src={'./images/about/ferrari-frame.jpg'}
+                                         alt={'Frame of Ferrari car'}/>
+                                </div>
+                                <div className={'about-tech'}>
+                                    <img className={'about-tech-image l'} src={'./images/about/roma-engine.jpeg'}
+                                         alt={'Car sketch from Fisker Automotive'}/>
+                                    <div className={'about-tech-panel r'}>
+                                        <h3 className={'about-tech-title'}>DBMS & Servers</h3>
+                                        <div className={'about-tech-area'}>
+                                            {
+                                                DbmsAndServers.map((item, index) => {
+                                                    return (
+                                                        <div key={index} className={'tech-stack-wrapper'}>
+                                                            <img className={'tech-stack-image'}
+                                                                 src={item.link}
+                                                                 title={item.altTxt}
+                                                                 alt={'Logo of ' + item.altTxt}/>
+                                                            <div className="middle-wrapper translate middle">
+                                                                <span>{item.altTxt}</span>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={'about-tech'}>
+                                    <div className={'about-tech-panel l'}>
+                                        <h3 className={'about-tech-title'}>Managements & Design</h3>
+                                        <div className={'about-tech-area'}>
+                                            {
+                                                DesignAndManagements.map((item, index) => {
+                                                    return (
+                                                        <div key={index} className={'tech-stack-wrapper'}>
+                                                            <img className={'tech-stack-image'}
+                                                                 src={item.link}
+                                                                 title={item.altTxt}
+                                                                 alt={'Logo of ' + item.altTxt}/>
+                                                            <div className="middle-wrapper translate middle">
+                                                                <span>{item.altTxt}</span>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </div>
+                                    <img className={'about-tech-image r'} src={'./images/about/car-sketch.jpg'}
+                                         alt={'Exterior of Ferrari Roma'}/>
+                                </div>
                             </div>
                         </div>
                     </div>

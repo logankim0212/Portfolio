@@ -93,10 +93,10 @@ class Home extends Component {
     render() {
         const name = 'Logan J. Kim';
         const title = 'Software Engineer';
-        const description = 'My path in software engineering began in 2017. Since then, I\'ve completed my advanced ' +
-            'technology diploma in software engineering with high honours and gained professional experience in both ' +
-            'private and public sectors to broaden my horizons. I am currently a senior software engineer at an ' +
-            'applied research centre of Centennial College.';
+        const description = 'My path in software engineering began in 2017. I majored in software engineering, ' +
+            'graduated with high honours, and gained professional experience in both the private and public sectors ' +
+            'to broaden my horizons. I am currently a senior software engineer at an applied research centre of ' +
+            'Centennial College.';
 
         return (
             <div className={'page'}>
