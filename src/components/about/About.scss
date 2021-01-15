@@ -100,8 +100,36 @@
 
       &__txt {
         display: block;
-        text-align: left;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
       }
+    }
+
+    .about-tech {
+      margin: 1rem auto;
+    }
+
+    .about-tech-panel {
+      width: 100%;
+    }
+
+    .about-tech-area {
+      width: 100%;
+    }
+
+      .about-tech-image {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .l {
+      margin-right: 0;
+    }
+
+    .r {
+      margin-left: 0;
     }
   }
 }

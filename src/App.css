@@ -327,3 +327,19 @@
     box-shadow: 0 0 30px #fafafa;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .a {
+    order: 2;
+  }
+
+  .b {
+    text-align: center;
+    order: 1;
+  }
+}

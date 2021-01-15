@@ -116,8 +116,8 @@ export default class About extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={'about-tech'}>
-                                    <div className={'about-tech-panel l'}>
+                                <div className={'about-tech flex'}>
+                                    <div className={'about-tech-panel l a'}>
                                         <h3 className={'about-tech-title'}>Frameworks & Libraries</h3>
                                         <div className={'about-tech-area'}>
                                             {
@@ -137,7 +137,7 @@ export default class About extends Component {
                                             }
                                         </div>
                                     </div>
-                                    <img className={'about-tech-image r'} src={'./images/about/ferrari-frame.jpg'}
+                                    <img className={'about-tech-image r b'} src={'./images/about/ferrari-frame.jpg'}
                                          alt={'Frame of Ferrari car'}/>
                                 </div>
                                 <div className={'about-tech'}>
@@ -164,8 +164,8 @@ export default class About extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={'about-tech'}>
-                                    <div className={'about-tech-panel l'}>
+                                <div className={'about-tech flex'}>
+                                    <div className={'about-tech-panel l a'}>
                                         <h3 className={'about-tech-title'}>Managements & Design</h3>
                                         <div className={'about-tech-area'}>
                                             {
@@ -185,7 +185,7 @@ export default class About extends Component {
                                             }
                                         </div>
                                     </div>
-                                    <img className={'about-tech-image r'} src={'./images/about/car-sketch.jpg'}
+                                    <img className={'about-tech-image r b'} src={'./images/about/car-sketch.jpg'}
                                          alt={'Exterior of Ferrari Roma'}/>
                                 </div>
                             </div>

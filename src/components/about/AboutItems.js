@@ -149,8 +149,12 @@ export const DesignAndManagements = [
         link: './images/techStacks/apigee.png'
     },
     {
-        altTxt: 'Wordpress.org',
-        link: './images/techStacks/wordpress.png'
+        altTxt: 'Visual Paradigm',
+        link: './images/techStacks/visual-paradigm.png'
+    },
+    {
+        altTxt: 'Visio',
+        link: './images/techStacks/visio.png'
     },
     {
         altTxt: 'Jira',
@@ -163,6 +167,10 @@ export const DesignAndManagements = [
     {
         altTxt: 'Trello',
         link: './images/techStacks/trello.png'
+    },
+    {
+        altTxt: 'Wordpress.org',
+        link: './images/techStacks/wordpress.png'
     },
     {
         altTxt: 'Adobe XD',
