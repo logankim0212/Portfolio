@@ -26,7 +26,6 @@ export default class Contact extends Component {
         let fromLeft = document.querySelectorAll(".from-left");
         let fromRight = document.querySelectorAll(".from-right");
         let contactForm = document.querySelectorAll(".contact-form");
-        // let mailbox = document.querySelector(".mailbox");
 
         TweenMax.from([header, caption], 1.3, {
             delay: 1.3,
@@ -185,8 +184,6 @@ export default class Contact extends Component {
                                 {status === "ERROR" &&
                                 <p className={'form-message-error'}>Ooops! There was an error.</p>}
                             </form>
-                            {/*/!*source: http://maymktg.com/wp-content/uploads/2013/10/mail-sketch.png*!/*/}
-                            {/*<img className={'mailbox'} src={'./images/mailbox.png'} alt="Mailbox sketch"/>*/}
                         </div>
                     </div>
                 </section>
