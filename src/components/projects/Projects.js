@@ -64,7 +64,7 @@ export default class Projects extends Component {
                 scrollTrigger: {
                     trigger: [projectTitle],
                     start: 'top 95%',
-                    end: 'bottom 5%',
+                    end: 'bottom 10%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -187,10 +187,10 @@ export default class Projects extends Component {
                                     </div>
                                 )
                             })
-                            }
-                            </div>
-                            </section>
-                            </div>
-                            )
                         }
-                        }
+                    </div>
+                </section>
+            </div>
+        )
+    }
+}
