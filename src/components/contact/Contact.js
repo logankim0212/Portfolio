@@ -178,7 +178,7 @@ export default class Contact extends Component {
                                           placeholder="Message"/>
                                 <br/>
                                 <p className={'form-message'}>Thanks, talk soon!</p>
-                                <button className={'form-button'}>Submit</button>
+                                <button className={'form-button'}>Send</button>
                                 <p className={'form-message-error'}>Ooops! There was an error.</p>
                             </form>
                         </div>
