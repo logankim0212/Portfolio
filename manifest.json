@@ -13,7 +13,7 @@
       "sizes": "204x199"
     }
   ],
-  "start_url": "/",
+  "start_url": "/Portfolio/",
   "display": "standalone",
   "theme_color": "#fafafa",
   "background_color": "#0e1111"
