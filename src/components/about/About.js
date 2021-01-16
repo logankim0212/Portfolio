@@ -4,6 +4,14 @@ import {TweenMax, TimelineMax, gsap} from "gsap";
 import {Languages, FrameworksAndLibraries, DbmsAndServers, DesignAndManagements} from "./AboutItems";
 
 export default class About extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            width: window.innerWidth
+        }
+    }
+
     componentDidMount() {
         document.title = "About - Logan's Portfolio";
 
@@ -115,31 +123,51 @@ export default class About extends Component {
             });
         }
 
+
         for (let i = 0; i < aboutTechImages.length; i++) {
-            let xVal = 0;
+            let movementVal = 0;
 
             if (i % 2 === 0) {
-                xVal = -100;
+                movementVal = -100;
             } else {
-                xVal = 100;
+                movementVal = 100;
             }
 
-            gsap.from([aboutTechImages[i]], {
-                delay: 0.5,
-                duration: 0.8,
-                ease: "ease.out",
-                x: xVal,
-                opacity: 0,
-                stagger: {
-                    amount: 0.15
-                },
-                scrollTrigger: {
-                    trigger: [aboutTechImages[i]],
-                    start: 'top 95%',
-                    end: 'bottom 5%',
-                    toggleActions: 'restart reverse restart reverse'
-                },
-            });
+            if (this.state.width <= 1000) {
+                gsap.from([aboutTechImages[i]], {
+                    delay: 0.5,
+                    duration: 0.8,
+                    ease: "ease.out",
+                    y: movementVal,
+                    opacity: 0,
+                    stagger: {
+                        amount: 0.15
+                    },
+                    scrollTrigger: {
+                        trigger: [aboutTechImages[i]],
+                        start: 'top 95%',
+                        end: 'bottom 5%',
+                        toggleActions: 'restart reverse restart reverse'
+                    },
+                });
+            } else {
+                gsap.from([aboutTechImages[i]], {
+                    delay: 0.5,
+                    duration: 0.8,
+                    ease: "ease.out",
+                    x: movementVal,
+                    opacity: 0,
+                    stagger: {
+                        amount: 0.15
+                    },
+                    scrollTrigger: {
+                        trigger: [aboutTechImages[i]],
+                        start: 'top 95%',
+                        end: 'bottom 5%',
+                        toggleActions: 'restart reverse restart reverse'
+                    },
+                });
+            }
         }
 
         for (let i = 0; i < aboutTechAreas.length; i++) {
