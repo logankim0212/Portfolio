@@ -13,7 +13,7 @@ export default class Contact extends Component {
         this.submitForm = this.submitForm.bind(this);
 
         this.state = {
-            status: ""
+            status: ''
         };
     }
 
@@ -25,6 +25,7 @@ export default class Contact extends Component {
         let divider = document.querySelector(".divider");
         let fromLeft = document.querySelectorAll(".from-left");
         let fromRight = document.querySelectorAll(".from-right");
+        let contactForm = document.querySelectorAll(".contact-form");
         // let mailbox = document.querySelector(".mailbox");
 
         TweenMax.from([header, caption], 1.3, {
@@ -68,27 +69,33 @@ export default class Contact extends Component {
             }
         });
 
-        // TweenMax.from([mailbox], 1.3, {
-        //     delay: 1.3,
-        //     ease: "back.out",
-        //     transformOrigin: "center",
-        //     scaleX: .7, scaleY: .7,
-        //     opacity: 0,
-        //     stagger: {
-        //         amount: 0.15
-        //     }
-        // });
+        TweenMax.from([contactForm], 1.3, {
+            delay: 1.3,
+            ease: "back.out",
+            transformOrigin: "center",
+            scaleX: .7, scaleY: .7,
+            opacity: 0,
+            stagger: {
+                amount: 0.15
+            }
+        });
     }
 
     submitForm(ev) {
         ev.preventDefault();
+
         const form = ev.target;
         const data = new FormData(form);
         const xhr = new XMLHttpRequest();
+
         xhr.open(form.method, form.action);
         xhr.setRequestHeader("Accept", "application/json");
+
         xhr.onreadystatechange = () => {
-            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.readyState !== XMLHttpRequest.DONE) {
+                return;
+            }
+
             if (xhr.status === 200) {
                 form.reset();
                 this.setState({status: "SUCCESS"});
@@ -96,6 +103,7 @@ export default class Contact extends Component {
                 this.setState({status: "ERROR"});
             }
         };
+
         xhr.send(data);
     }
 
@@ -158,14 +166,24 @@ export default class Contact extends Component {
                                 onSubmit={this.submitForm}
                                 action="https://formspree.io/f/xaylarqb"
                                 method="POST">
-                                <input className={'contact-form-input'} typeof={'email'} name="email"
+                                <input type="text" name="_gotcha" style={{display: "none"}}/>
+                                <input className={'contact-form-input'}
+                                       typeof={'email'}
+                                       name="email"
                                        placeholder="Email"/>
-                                <input className={'contact-form-input'} typeof={'name'} name="name" placeholder="Name"/>
-                                <textarea className={'contact-form-input message'} typeof={'text'} name="message"
+                                <input className={'contact-form-input'}
+                                       typeof={'name'}
+                                       name="name"
+                                       placeholder="Name"/>
+                                <textarea className={'contact-form-input message'}
+                                          typeof={'text'}
+                                          name="message"
                                           placeholder="Message"/>
                                 <br/>
-                                {status === "SUCCESS" ? <p className={'form-message'}>Thanks, talk soon!</p> : <button className={'form-button'}>Submit</button>}
-                                {status === "ERROR" && <p className={'form-message-error'}>Ooops! There was an error.</p>}
+                                {status === "SUCCESS" ? <p className={'form-message'}>Thanks, talk soon!</p> :
+                                    <button className={'form-button'}>Submit</button>}
+                                {status === "ERROR" &&
+                                <p className={'form-message-error'}>Ooops! There was an error.</p>}
                             </form>
                             {/*/!*source: http://maymktg.com/wp-content/uploads/2013/10/mail-sketch.png*!/*/}
                             {/*<img className={'mailbox'} src={'./images/mailbox.png'} alt="Mailbox sketch"/>*/}

@@ -66,6 +66,12 @@
     border: none;
     box-shadow: 0 0 20px #000000;
     -webkit-box-shadow: 0 0 20px #000000;
+    transition: 0.3s;
+  }
+
+  .contact-form-input:focus {
+    box-shadow: 0 0 10px #fafafa;
+    -webkit-box-shadow: 0 0 10px #fafafa;
   }
 
   .contact-form-input.message {
@@ -89,6 +95,8 @@
   .form-button:hover {
     background-color: #c5b358;
     color: #0e1111;
+    box-shadow: 0 0 10px #fafafa;
+    -webkit-box-shadow: 0 0 10px #fafafa;
   }
 
   .form-message {
