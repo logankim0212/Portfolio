@@ -68,11 +68,11 @@
     -webkit-box-shadow: 0 0 20px #000000;
     transition: 0.3s;
   }
-  //
-  //.contact-form-input:focus {
-  //  box-shadow: 0 0 10px #fafafa;
-  //  -webkit-box-shadow: 0 0 10px #fafafa;
-  //}
+
+  .contact-form-input:focus {
+    box-shadow: 0 0 10px #fafafa;
+    -webkit-box-shadow: 0 0 10px #fafafa;
+  }
 
   .contact-form-input.message {
     height: 25vh;

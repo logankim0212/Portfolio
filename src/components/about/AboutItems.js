@@ -67,6 +67,10 @@ export const FrameworksAndLibraries = [
         link: './images/techStacks/asp-net.png'
     },
     {
+        altTxt: 'Gsap',
+        link: './images/techStacks/gsap.png'
+    },
+    {
         altTxt: 'Junit5',
         link: './images/techStacks/junit5.png'
     },

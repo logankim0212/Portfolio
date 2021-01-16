@@ -17,6 +17,12 @@ import NotFound from './components/404/NotFound'
 
 class App extends Component {
     render() {
+        console.log('Welcome to Logan\'s portfolio!')
+        console.log('My path in software engineering began in 2017. I majored in software engineering, graduated ' +
+            'with high honours, and gained professional experience in both the private and public sectors to ' +
+            'broaden my horizons. I am currently a senior software engineer at an applied research centre of ' +
+            'Centennial College.')
+        console.log('This portfolio is build with React along with Gsap for animations.')
         const onEnter = node => {
             TweenMax.from(
                 [node.children[0].firstElementChild, node.children[0].lastElementChild],
@@ -48,7 +54,7 @@ class App extends Component {
                                 <Route exact path={'/projects'} component={Projects}/>
                                 <Route exact path={'/timeline'} component={Timeline}/>
                                 <Route exact path={'/contact'} component={Contact}/>
-                                <Route exact path='*' component={NotFound} />
+                                <Route exact path='*' component={NotFound}/>
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>
