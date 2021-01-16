@@ -212,7 +212,7 @@ export default class About extends Component {
                                          alt={'Engine room of Ferrari Roma'}/>
                                     <div className={'about-tech-panel r'}>
                                         <div className={'line-wrap'}>
-                                            <h3 className={'about-tech-title'}>Languages</h3>
+                                            <h3 className={'about-tech-title color'}>Languages</h3>
                                         </div>
                                         <div className={'about-tech-area'}>
                                             {
@@ -236,7 +236,7 @@ export default class About extends Component {
                                 <div className={'about-tech flex'}>
                                     <div className={'about-tech-panel l a'}>
                                         <div className={'line-wrap'}>
-                                            <h3 className={'about-tech-title'}>Frameworks & Libraries</h3>
+                                            <h3 className={'about-tech-title color'}>Frameworks & Libraries</h3>
                                         </div>
                                         <div className={'about-tech-area'}>
                                             {
@@ -264,7 +264,7 @@ export default class About extends Component {
                                          alt={'Car sketch from Fisker Automotive'}/>
                                     <div className={'about-tech-panel r'}>
                                         <div className={'line-wrap'}>
-                                            <h3 className={'about-tech-title'}>DBMS & Servers</h3>
+                                            <h3 className={'about-tech-title color'}>DBMS & Servers</h3>
                                         </div>
                                         <div className={'about-tech-area'}>
                                             {
@@ -288,7 +288,7 @@ export default class About extends Component {
                                 <div className={'about-tech flex'}>
                                     <div className={'about-tech-panel l a'}>
                                         <div className={'line-wrap'}>
-                                            <h3 className={'about-tech-title'}>Managements & Design</h3>
+                                            <h3 className={'about-tech-title color'}>Managements & Design</h3>
                                         </div>
                                         <div className={'about-tech-area'}>
                                             {
