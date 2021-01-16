@@ -30,22 +30,6 @@ class App extends Component {
             );
         };
 
-        const onExit = node => {
-            TweenMax.to(
-                [node.children[0].firstElementChild, node.children[0].lastElementChild],
-                0.5,
-                {
-                    transformOrigin: "center",
-                    scaleX: .9, scaleY: .9,
-                    ease: "back.InOut",
-                    opacity: 1,
-                    stagger: {
-                        amount: 0.2
-                    }
-                }
-            );
-        };
-
         return (
             <Router basename="/Portfolio">
                 <Navbar/>
@@ -56,7 +40,6 @@ class App extends Component {
                             in={true}
                             timeout={1200}
                             classNames='fade'
-                            onExit={onExit}
                             onEntering={onEnter}
                             unmountOnExit>
                             <Switch location={location}>

@@ -11,10 +11,6 @@ export default class Contact extends Component {
         super(props);
 
         this.submitForm = this.submitForm.bind(this);
-
-        this.state = {
-            status: ''
-        };
     }
 
     componentDidMount() {
@@ -86,6 +82,9 @@ export default class Contact extends Component {
         const form = ev.target;
         const data = new FormData(form);
         const xhr = new XMLHttpRequest();
+        const formMessageStyle = document.querySelector(".form-message").style;
+        const formButtonStyle = document.querySelector(".form-button").style;
+        const formMessageErrorStyle = document.querySelector(".form-message-error").style;
 
         xhr.open(form.method, form.action);
         xhr.setRequestHeader("Accept", "application/json");
@@ -97,9 +96,10 @@ export default class Contact extends Component {
 
             if (xhr.status === 200) {
                 form.reset();
-                this.setState({status: "SUCCESS"});
+                formMessageStyle.display = 'block';
+                formButtonStyle.display = 'none';
             } else {
-                this.setState({status: "ERROR"});
+                formMessageErrorStyle.display = 'block';
             }
         };
 
@@ -107,8 +107,6 @@ export default class Contact extends Component {
     }
 
     render() {
-        const {status} = this.state;
-
         return (
             <div className={'page'}>
                 <section id="colorlib-hero" className="js-fullheight contact" data-section="contact">
@@ -179,10 +177,9 @@ export default class Contact extends Component {
                                           name="message"
                                           placeholder="Message"/>
                                 <br/>
-                                {status === "SUCCESS" ? <p className={'form-message'}>Thanks, talk soon!</p> :
-                                    <button className={'form-button'}>Submit</button>}
-                                {status === "ERROR" &&
-                                <p className={'form-message-error'}>Ooops! There was an error.</p>}
+                                <p className={'form-message'}>Thanks, talk soon!</p>
+                                <button className={'form-button'}>Submit</button>
+                                <p className={'form-message-error'}>Ooops! There was an error.</p>
                             </form>
                         </div>
                     </div>
