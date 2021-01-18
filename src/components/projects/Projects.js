@@ -50,6 +50,7 @@ export default class Projects extends Component {
             let projectTitle = document.querySelector(".project-title" + i);
             let projectDescription = document.querySelector(".project-description" + i);
             let projectButton = document.querySelector(".project-button" + i);
+            let githubButton = document.querySelector(".github-button" + i);
             let projectImage = document.querySelector(".project-image" + i);
 
             gsap.from([projectTitle], {
@@ -92,6 +93,22 @@ export default class Projects extends Component {
                 opacity: 0,
                 scrollTrigger: {
                     trigger: [projectButton],
+                    start: 'top 100%',
+                    end: 'bottom 5%',
+                    toggleActions: 'restart reverse restart reverse'
+                },
+            });
+
+            gsap.from([githubButton], {
+                delay: 1,
+                duration: 1,
+                ease: "back.out",
+                transformOrigin: "center",
+                scaleX: .3,
+                scaleY: .3,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: [githubButton],
                     start: 'top 100%',
                     end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
@@ -171,6 +188,25 @@ export default class Projects extends Component {
                                                                             <span
                                                                                 className="button-text">View Project</span>
                                                                             <span className="hover-button-text">View Project</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div className={'github-button' + (index + 1)}>
+                                                <a href={item.githubLink} target="_blank" rel="noreferrer">
+                                                    <div className="button">
+                                                        <div className="inner-button-1">
+                                                            <div className="inner-button-2">
+                                                                <div className="inner-button-3">
+                                                                    <div className="inner-button-4">
+                                                                        <div className="inner-button-content">
+                                                                            <span
+                                                                                className="button-text">View Code</span>
+                                                                            <span className="hover-button-text">View Code</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
