@@ -212,7 +212,8 @@ export default class About extends Component {
                             <img className="content__img" src={'./images/about.jpg'}
                                  alt={'Logan playing an acoustic guitar around a campfire'}/>
                             <div className="content__txt">
-                                <p className={'about-text'}>Hey there! I'm Logan Kim, but feel free to call me Logan.</p>
+                                <p className={'about-text'}>Hey there! I'm Logan Kim, but feel free to call me
+                                    Logan.</p>
                                 <br/>
                                 <div className={'line-wrap'}>
                                     <h2 className={'about-title'}>I am a creative software engineer in Toronto.</h2>
@@ -226,10 +227,9 @@ export default class About extends Component {
                                 <div className={'line-wrap'}>
                                     <h2 className={'about-title'}>What makes me different?</h2>
                                 </div>
-                                <p className={'about-text'}>I approach from a different perspectives and deliver
-                                    efficient and effective solution
-                                    incorporating my creative mindset. This is what keeps me up at night and I will not
-                                    stop sharing my creativity and passion.</p>
+                                <p className={'about-text'}>I approach from different perspectives and deliver an
+                                    efficient and effective solution incorporating my creative mindset. This is what
+                                    keeps me up at night and I will not stop sharing my creativity and passion.</p>
                             </div>
                             <div className={'about-skills'}>
                                 <div className={'line-wrap'}>
