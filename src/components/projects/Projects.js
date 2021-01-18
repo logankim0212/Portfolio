@@ -76,8 +76,8 @@ export default class Projects extends Component {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: [projectDescription],
-                    start: 'top 95%',/**/
-                    end: 'bottom 10%',
+                    start: 'top 100%',/**/
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -92,8 +92,8 @@ export default class Projects extends Component {
                 opacity: 0,
                 scrollTrigger: {
                     trigger: [projectButton],
-                    start: 'top 95%',
-                    end: 'bottom 10%',
+                    start: 'top 100%',
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -106,8 +106,8 @@ export default class Projects extends Component {
                     ease: "power3.inOut",
                     scrollTrigger: {
                         trigger: [projectImage],
-                        start: 'top 95%',/**/
-                        end: 'bottom 10%',
+                        start: 'top 100%',/**/
+                        end: 'bottom 5%',
                         toggleActions: 'restart reverse restart reverse'
                     },
                 });
@@ -119,8 +119,8 @@ export default class Projects extends Component {
                     ease: "power3.inOut",
                     scrollTrigger: {
                         trigger: [projectImage],
-                        start: 'top 95%',/**/
-                        end: 'bottom 10%',
+                        start: 'top 100%',/**/
+                        end: 'bottom 5%',
                         toggleActions: 'restart reverse restart reverse'
                     },
                 });

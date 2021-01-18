@@ -159,6 +159,7 @@ export default class Contact extends Component {
                             </div>
                         </div>
                         <div className="contact-form right vertical-middle">
+                            <h2 className={'sub-header'}>Let's Talk</h2>
                             <form
                                 onSubmit={this.submitForm}
                                 action="https://formspree.io/f/xaylarqb"

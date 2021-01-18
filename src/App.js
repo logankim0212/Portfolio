@@ -37,7 +37,7 @@ class App extends Component {
         };
 
         return (
-            <Router basename="/Portfolio">
+            <Router basename={process.env.PUBLIC_URL}>
                 <Navbar/>
                 <Route render={({location}) => (
                     <TransitionGroup>

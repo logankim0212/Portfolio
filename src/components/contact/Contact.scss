@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .contact {
   .wrap {
     position: relative;
@@ -49,6 +51,11 @@
   .mailbox {
     width: 33vw;
     opacity: .7;
+  }
+
+  .sub-header {
+    font-size: 2em;
+    font-family: 'Kaushan Script', cursive;
   }
 
   .contact-form {

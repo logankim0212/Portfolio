@@ -81,7 +81,7 @@ export default class About extends Component {
                 },
                 scrollTrigger: {
                     trigger: [aboutTitles[i]],
-                    start: 'top 95%',
+                    start: 'top 100%',
                     end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
@@ -97,8 +97,8 @@ export default class About extends Component {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: [aboutTexts[i]],
-                    start: 'top 95%',/**/
-                    end: 'bottom 10%',
+                    start: 'top 100%',/**/
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -116,7 +116,7 @@ export default class About extends Component {
                 },
                 scrollTrigger: {
                     trigger: [aboutTechTitles[i]],
-                    start: 'top 95%',
+                    start: 'top 100%',
                     end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
@@ -145,7 +145,7 @@ export default class About extends Component {
                     },
                     scrollTrigger: {
                         trigger: [aboutTechImages[i]],
-                        start: 'top 95%',
+                        start: 'top 100%',
                         end: 'bottom 5%',
                         toggleActions: 'restart reverse restart reverse'
                     },
@@ -162,7 +162,7 @@ export default class About extends Component {
                     },
                     scrollTrigger: {
                         trigger: [aboutTechImages[i]],
-                        start: 'top 95%',
+                        start: 'top 100%',
                         end: 'bottom 5%',
                         toggleActions: 'restart reverse restart reverse'
                     },
@@ -181,8 +181,8 @@ export default class About extends Component {
                 opacity: 0,
                 scrollTrigger: {
                     trigger: [aboutTechAreas[i]],
-                    start: 'top 95%',
-                    end: 'bottom 10%',
+                    start: 'top 100%',
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });

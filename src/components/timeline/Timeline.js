@@ -67,7 +67,7 @@ export default class Timeline extends Component {
                 scrollTrigger: {
                     trigger: [timelineIcon, timelineThumbnail],
                     start: 'top 100%',
-                    end: 'bottom 10%',
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -84,7 +84,7 @@ export default class Timeline extends Component {
                 scrollTrigger: {
                     trigger: [timelineIcon, timelineThumbnail],
                     start: 'top 100%',
-                    end: 'bottom 10%',
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -97,7 +97,7 @@ export default class Timeline extends Component {
                 scrollTrigger: {
                     trigger: [timelineDuties],
                     start: 'top 100%',/**/
-                    end: 'bottom 10%',
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
@@ -112,7 +112,7 @@ export default class Timeline extends Component {
                 scrollTrigger: {
                     trigger: [timelineTechStack],
                     start: 'top 100%',
-                    end: 'bottom 10%',
+                    end: 'bottom 5%',
                     toggleActions: 'restart reverse restart reverse'
                 },
             });
