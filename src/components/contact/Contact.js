@@ -171,7 +171,7 @@ export default class Contact extends Component {
                                        placeholder="Email"
                                        required={true}/>
                                 <input className={'contact-form-input'}
-                                       type={'name'}
+                                       type={'text'}
                                        name="name"
                                        placeholder="Name"
                                        required={true}/>
