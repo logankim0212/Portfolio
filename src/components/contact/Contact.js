@@ -176,7 +176,6 @@ export default class Contact extends Component {
                                        placeholder="Name"
                                        required={true}/>
                                 <textarea className={'contact-form-input message'}
-                                          type={'text'}
                                           name="message"
                                           placeholder="Message"
                                           required={true}/>
