@@ -4,12 +4,12 @@ export const TimelineItems = [
         title: 'Senior Software Engineer',
         company: 'Centennial College: WIMTACH',
         duties: [
-            'Engineered a 10-month HCIS project, an EMR software serving 1.5 million Ontarians, developing interface ' +
-            'modules and REST APIs in Java with Spring',
+            'Engineered microservice Java back-end application with Spring Boot from scratch to replace Flash-based ' +
+            'legacy system by delivering REST APIs that efficiently handles over 1.5 million Ontarians’ medical records',
             'Led a team of 7, using JUnit and REST Assured to implement an automation test suite on GitHub with ' +
             'Jenkins, as a part of CI pipeline, which reduced bugs by 40% and accelerated the deployment by 20%',
-            'Increased resilience of applications by implementing Pub/Sub with Google Cloud or MQTT as an asynchronous ' +
-            'middleware to handle high-volume messages of access logs',
+            'Increased resilience of applications by implementing Pub/Sub with GCP as an asynchronous middleware to ' +
+            'handle high-volume messages of access logs',
             'Improved response time of REST APIs by 30% and coding performance of developers by 20% with various ' +
             'enhancements including implementation of Lombok',
             'Collaborated with BA/QA team members and front-end developers to establish objectives and design more ' +
@@ -62,10 +62,6 @@ export const TimelineItems = [
             {
                 altTxt: 'Google Cloud Platform',
                 link: './images/techStacks/gcp.webp'
-            },
-            {
-                altTxt: 'MQTT',
-                link: './images/techStacks/mqtt.png'
             },
             {
                 altTxt: 'Git',
@@ -223,31 +219,6 @@ export const TimelineItems = [
                 altTxt: 'GitHub',
                 link: './images/techStacks/github.png'
             }
-        ]
-    },
-    {
-        dateRange: 'September 2017 - December 2020',
-        title: 'Ontario College Advanced Diploma (High Honours), Software Engineering Technology (Co-op)',
-        company: 'Centennial College',
-        duties: [
-            'Senior student researcher of Centennial College\'s applied research centre, 2020',
-            'Selected as one of the top college-wide students for Centennial College Golf Merit Scholarship in 2020',
-            'Selected as one of the top 5 college-wide international students for CCSAI Merit Scholarship in 2019',
-            'Participated in Centennial College SETAS-ARIES Student Hackathon, 2018'
-        ],
-        techStacks: [
-            {
-                altTxt: 'Centennial College',
-                link: './images/techStacks/centennial-college.jpeg'
-            },
-            {
-                altTxt: 'CCSAI',
-                link: './images/techStacks/ccsai.png'
-            },
-            {
-                altTxt: 'WIMTACH',
-                link: './images/techStacks/wimtach.png'
-            },
         ]
     }
 ]

@@ -85,10 +85,6 @@ export const FrameworksAndLibraries = [
     {
         altTxt: 'CreateJS',
         link: './images/techStacks/create-js.png'
-    },
-    {
-        altTxt: 'Next.js',
-        link: './images/techStacks/next-js.svg'
     }
 ]
 

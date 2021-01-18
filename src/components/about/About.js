@@ -212,7 +212,7 @@ export default class About extends Component {
                             <img className="content__img" src={'./images/about.jpg'}
                                  alt={'Logan playing an acoustic guitar around a campfire'}/>
                             <div className="content__txt">
-                                <p className={'about-text'}>Hey there! I'm Logan Kim. Feel free to call me Logan.</p>
+                                <p className={'about-text'}>Hey there! I'm Logan Kim, but feel free to call me Logan.</p>
                                 <br/>
                                 <div className={'line-wrap'}>
                                     <h2 className={'about-title'}>I am a creative software engineer in Toronto.</h2>
