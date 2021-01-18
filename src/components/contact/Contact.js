@@ -166,17 +166,20 @@ export default class Contact extends Component {
                                 method="POST">
                                 <input type="text" name="_gotcha" style={{display: "none"}}/>
                                 <input className={'contact-form-input'}
-                                       typeof={'email'}
+                                       type={'email'}
                                        name="email"
-                                       placeholder="Email"/>
+                                       placeholder="Email"
+                                       required={true}/>
                                 <input className={'contact-form-input'}
-                                       typeof={'name'}
+                                       type={'name'}
                                        name="name"
-                                       placeholder="Name"/>
+                                       placeholder="Name"
+                                       required={true}/>
                                 <textarea className={'contact-form-input message'}
-                                          typeof={'text'}
+                                          type={'text'}
                                           name="message"
-                                          placeholder="Message"/>
+                                          placeholder="Message"
+                                          required={true}/>
                                 <br/>
                                 <p className={'form-message'}>Thanks, talk soon!</p>
                                 <button className={'form-button'}>Send</button>
