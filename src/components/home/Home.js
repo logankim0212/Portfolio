@@ -95,7 +95,8 @@ class Home extends Component {
         const title = 'Software Engineer';
         const description = 'My path in software engineering began in 2017. I majored in software engineering, ' +
             'graduated with high honours, and gained professional experience in both the private and public sectors ' +
-            'to broaden my horizons. I am currently seeking a full-time position in the Greater Toronto Area.';
+            'to broaden my horizons. I am currently seeking a software engineering/full-stack developer position in ' +
+            'the Greater Toronto Area where dependability is valued.';
 
         return (
             <div className={'page'}>
